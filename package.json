@@ -41,7 +41,6 @@
     "@loopback/rest-explorer": "^1.1.14",
     "jquery": "^3.3.1",
     "oasgraph-cli": "^0.4.1",
-    "phantom": "^6.2.0",
     "rxjs": "^6.4.0",
     "winston": "^3.2.1",
     "winston-mongodb": "^5.0.0"
