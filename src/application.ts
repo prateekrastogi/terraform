@@ -1,13 +1,13 @@
-import { BootMixin } from '@loopback/boot'
-import { ApplicationConfig } from '@loopback/core'
+import {BootMixin} from '@loopback/boot'
+import {ApplicationConfig} from '@loopback/core'
 import {
   RestExplorerBindings,
   RestExplorerComponent
 } from '@loopback/rest-explorer'
-import { RepositoryMixin } from '@loopback/repository'
-import { RestApplication } from '@loopback/rest'
+import {RepositoryMixin} from '@loopback/repository'
+import {RestApplication} from '@loopback/rest'
 import * as path from 'path'
-import { MySequence } from './sequence'
+import {MySequence} from './sequence'
 
 export class LoopbackNextLeanStarterApplication extends BootMixin(
   RepositoryMixin(RestApplication)
