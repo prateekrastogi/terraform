@@ -41,6 +41,7 @@
     "@loopback/rest-explorer": "^1.1.14",
     "cuid": "^2.1.6",
     "jquery": "^3.3.1",
+    "loopback-connector-mongodb": "^4.1.0",
     "oasgraph-cli": "^0.4.1",
     "puppeteer": "^1.14.0",
     "rxjs": "^6.4.0",
