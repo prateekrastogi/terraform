@@ -1,7 +1,6 @@
 import {
   Count,
   CountSchema,
-  Filter,
   repository,
   Where
 } from '@loopback/repository'
@@ -9,13 +8,10 @@ import {
   post,
   param,
   get,
-  getFilterSchemaFor,
   getWhereSchemaFor,
-  patch,
-  put,
-  del,
   requestBody
 } from '@loopback/rest'
+import { Context, BindingScope} from '@loopback/context'
 import {User} from '../models'
 import {UserRepository} from '../repositories'
 
@@ -51,3 +47,9 @@ export class GithubController {
     return await this.userRepository.count(where)
   }
 }
+
+const appCtx = new Context('application')
+appCtx
+  .bind('controllers.GithubController')
+  .toClass(GithubController)
+  .inScope(BindingScope.SINGLETON)
