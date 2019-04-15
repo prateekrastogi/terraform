@@ -33,6 +33,12 @@ export class User extends Entity {
   })
   password: string
 
+  @property({
+    type: 'boolean',
+    default: false
+  })
+  dox: boolean
+
   // Define well-known properties here
 
   // Indexer property to allow additional data
