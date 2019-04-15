@@ -1,14 +1,14 @@
-import {inject} from '@loopback/core';
-import {juggler} from '@loopback/repository';
-import * as config from './mongo-local.datasource.json';
+import {inject} from '@loopback/core'
+import {juggler} from '@loopback/repository'
+import * as config from './mongo-local.datasource.json'
 
 export class MongoLocalDataSource extends juggler.DataSource {
-  static dataSourceName = 'mongoLocal';
+  static dataSourceName = 'mongoLocal'
 
   constructor(
     @inject('datasources.config.mongoLocal', {optional: true})
-    dsConfig: object = config,
+    dsConfig: object = config
   ) {
-    super(dsConfig);
+    super(dsConfig)
   }
 }

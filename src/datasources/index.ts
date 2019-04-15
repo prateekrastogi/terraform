@@ -1,1 +1,1 @@
-export * from './mongo-local.datasource';
+export * from './mongo-local.datasource'
