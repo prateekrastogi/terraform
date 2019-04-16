@@ -1,15 +1,15 @@
 import {DefaultCrudRepository} from '@loopback/repository'
-import {User} from '../models'
+import {BotCredential} from '../models'
 import {MongoLocalDataSource} from '../datasources'
 import {inject} from '@loopback/core'
 
-export class UserRepository extends DefaultCrudRepository<
-  User,
-  typeof User.prototype.id
+export class BotCredentialRepository extends DefaultCrudRepository<
+  BotCredential,
+  typeof BotCredential.prototype.id
 > {
   constructor(
     @inject('datasources.mongoLocal') dataSource: MongoLocalDataSource
   ) {
-    super(User, dataSource)
+    super(BotCredential, dataSource)
   }
 }

@@ -12,24 +12,24 @@ import {
   requestBody
 } from '@loopback/rest'
 import { Context, BindingScope} from '@loopback/context'
-import {User} from '../models'
-import {UserRepository} from '../repositories'
+import {BotCredential} from '../models'
+import {BotCredentialRepository} from '../repositories'
 
 export class GithubController {
   constructor(
-    @repository(UserRepository)
-    public userRepository: UserRepository
+    @repository(BotCredentialRepository)
+    public userRepository: BotCredentialRepository
   ) {}
 
   @post('/users', {
     responses: {
       '200': {
         description: 'User model instance',
-        content: {'application/json': {schema: {'x-ts-type': User}}}
+        content: {'application/json': {schema: {'x-ts-type': BotCredential}}}
       }
     }
   })
-  async create(@requestBody() user: User): Promise<User> {
+  async create(@requestBody() user: BotCredential): Promise<BotCredential> {
     return await this.userRepository.create(user)
   }
 
@@ -42,7 +42,7 @@ export class GithubController {
     }
   })
   async count(
-    @param.query.object('where', getWhereSchemaFor(User)) where?: Where
+    @param.query.object('where', getWhereSchemaFor(BotCredential)) where?: Where
   ): Promise<Count> {
     return await this.userRepository.count(where)
   }
