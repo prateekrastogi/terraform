@@ -1,26 +1,23 @@
-import {
-  Count,
-  CountSchema,
-  repository,
-  Where
-} from '@loopback/repository'
-import {
-  post,
-  param,
-  get,
-  getWhereSchemaFor,
-  requestBody
-} from '@loopback/rest'
-import { Context, BindingScope} from '@loopback/context'
+import {Count, CountSchema, repository, Where} from '@loopback/repository'
+import {post, param, get, getWhereSchemaFor, requestBody} from '@loopback/rest'
+import {Context, BindingScope, inject} from '@loopback/context'
 import {BotCredential} from '../models'
 import {BotCredentialRepository} from '../repositories'
+import {
+  AuthenticationBindings,
+  UserProfile,
+  authenticate
+} from '@loopback/authentication'
 
 export class GithubController {
   constructor(
     @repository(BotCredentialRepository)
-    public userRepository: BotCredentialRepository
+    public userRepository: BotCredentialRepository,
+    @inject(AuthenticationBindings.CURRENT_USER)
+    private user: UserProfile
   ) {}
 
+  @authenticate('BasicStrategy')
   @post('/users', {
     responses: {
       '200': {
@@ -33,6 +30,7 @@ export class GithubController {
     return await this.userRepository.create(user)
   }
 
+  @authenticate('BasicStrategy')
   @get('/users/count', {
     responses: {
       '200': {
