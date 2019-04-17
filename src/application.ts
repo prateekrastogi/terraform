@@ -8,11 +8,6 @@ import {RepositoryMixin} from '@loopback/repository'
 import {RestApplication} from '@loopback/rest'
 import * as path from 'path'
 import {MySequence} from './sequence'
-import {
-  AuthenticationComponent,
-  AuthenticationBindings
-} from '@loopback/authentication'
-import {MyAuthStrategyProvider} from './providers/auth-strategy.provider'
 
 export class LoopbackNextLeanStarterApplication extends BootMixin(
   RepositoryMixin(RestApplication)
@@ -31,11 +26,6 @@ export class LoopbackNextLeanStarterApplication extends BootMixin(
       path: '/explorer'
     })
     this.component(RestExplorerComponent)
-
-    this.bind(AuthenticationBindings.STRATEGY).toProvider(
-      MyAuthStrategyProvider
-    )
-    this.component(AuthenticationComponent)
 
     this.projectRoot = __dirname
     // Customize @loopback/boot Booter Conventions here
