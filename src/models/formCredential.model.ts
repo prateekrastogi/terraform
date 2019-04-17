@@ -16,35 +16,42 @@ export class FormCredential extends Entity {
   realm: string
 
   @property({
-    type: 'string',
-    required: true
+    type: 'array',
+    default: []
   })
-  name: string
+  contains: string[]
 
   @property({
-    type: 'string',
-    required: true
+    type: 'object',
+    default: {}
   })
-  email: string
+  dailyRoutineLogs: object
 
   @property({
-    type: 'string',
-    required: true
-  })
-  password: string
-
-  @property({
-    type: 'Array',
+    type: 'array',
     default: []
   })
   externalIPs: string[]
 
-  
   @property({
     type: 'string'
   })
-  lastDateTime: string
+  loginHandle: string
 
+  @property({
+    type: 'string'
+  })
+  password: string
+
+  @property({
+    type: 'string'
+  })
+  email: string
+
+  @property({
+    type: 'string'
+  })
+  name: string
 
   @property({
     type: 'boolean',
