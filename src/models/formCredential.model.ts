@@ -37,7 +37,14 @@ export class FormCredential extends Entity {
     type: 'Array',
     default: []
   })
-  hosts: [string]
+  externalIPs: string[]
+
+  
+  @property({
+    type: 'string'
+  })
+  lastDateTime: string
+
 
   @property({
     type: 'boolean',
