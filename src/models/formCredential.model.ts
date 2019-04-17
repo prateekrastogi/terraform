@@ -45,8 +45,6 @@ export class FormCredential extends Entity {
   })
   dox: boolean
 
-  // Define well-known properties here
-
   // Indexer property to allow additional data
   [prop: string]: any
 
