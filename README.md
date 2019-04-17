@@ -1,6 +1,8 @@
 # terraform
 
-loopback-next-lean-starter
+
+
+# loopback-next-lean-starter
 
 [![LoopBack](https://github.com/strongloop/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
 
@@ -14,6 +16,7 @@ Major modifications are:
 - Pruned all the linting scripts to a single `lint` script.
 - Removed other non-essential scripts.
 - Minimized `.vscode` config.
+
 
 # Developer's Guide
 
