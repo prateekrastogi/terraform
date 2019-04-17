@@ -1,7 +1,7 @@
 import {Entity, model, property} from '@loopback/repository'
 
 @model({settings: {strict: false}})
-export class BotCredential extends Entity {
+export class FormCredential extends Entity {
   @property({
     type: 'string',
     id: true,
@@ -50,7 +50,7 @@ export class BotCredential extends Entity {
   // Indexer property to allow additional data
   [prop: string]: any
 
-  constructor(data?: Partial<BotCredential>) {
+  constructor(data?: Partial<FormCredential>) {
     super(data)
   }
 }

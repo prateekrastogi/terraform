@@ -1,7 +1,6 @@
 {
-    "name": "dripfeed",
+    "name": "terraform",
     "version": "1.0.0",
-    "description": "a cco dripfeed",
     "keywords": [
         "loopback-application",
         "loopback"
