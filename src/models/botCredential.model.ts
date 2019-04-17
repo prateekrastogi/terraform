@@ -34,6 +34,12 @@ export class BotCredential extends Entity {
   password: string
 
   @property({
+    type: 'Array',
+    default: []
+  })
+  hosts: [string]
+
+  @property({
     type: 'boolean',
     default: false
   })
