@@ -28,10 +28,10 @@ export class FormCredential extends Entity {
   dailyRoutineLogs: object
 
   @property({
-    type: 'object',
-    default: {}
+    type: 'array',
+    default: []
   })
-  externalIPInfo: object
+  externalIPs: string[]
 
   @property({
     type: 'string'
