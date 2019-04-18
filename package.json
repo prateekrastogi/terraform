@@ -45,9 +45,11 @@
         "@loopback/rest": "^1.10.0",
         "@loopback/rest-explorer": "^1.1.14",
         "cuid": "^2.1.6",
+        "faker": "^4.1.0",
         "jquery": "^3.3.1",
         "loopback-connector-mongodb": "^4.1.0",
         "oasgraph-cli": "^0.4.1",
+        "public-ip": "^3.0.0",
         "puppeteer": "^1.14.0",
         "rxjs": "^6.4.0"
     },
