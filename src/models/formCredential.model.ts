@@ -22,16 +22,16 @@ export class FormCredential extends Entity {
   contains: string[]
 
   @property({
-    type: 'object',
-    default: {}
-  })
-  dailyRoutineLogs: object
-
-  @property({
     type: 'array',
     default: []
   })
   externalIPs: string[]
+
+  @property({
+    type: 'object',
+    default: {}
+  })
+  dailyRoutineLogs: object
 
   @property({
     type: 'string'
