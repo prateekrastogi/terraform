@@ -1,1 +1,1 @@
-export * from './formCredential.repository'
+export * from './form-credential.repository'

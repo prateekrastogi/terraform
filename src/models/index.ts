@@ -1,1 +1,1 @@
-export * from './formCredential.model'
+export * from './form-credential.model'

@@ -3,7 +3,7 @@ import {FormCredential} from '../models'
 import {MongoLocalDataSource} from '../datasources'
 import {inject} from '@loopback/core'
 
-export class formCredentialRepository extends DefaultCrudRepository<
+export class FormCredentialRepository extends DefaultCrudRepository<
   FormCredential,
   typeof FormCredential.prototype.id
 > {
