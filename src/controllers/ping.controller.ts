@@ -1,5 +1,6 @@
 import {Request, RestBindings, get, ResponseObject} from '@loopback/rest'
 import {inject, Context, BindingScope} from '@loopback/context'
+import {initiate} from '../hooks'
 
 let bootStatus: boolean = false
 
@@ -64,5 +65,6 @@ appCtx
   .inScope(BindingScope.SINGLETON)
 
 function boot() {
+  initiate().subscribe()
   console.log(`'oo'`)
 }
