@@ -52,8 +52,7 @@
         "oasgraph-cli": "^0.4.1",
         "public-ip": "^3.0.0",
         "puppeteer": "^1.14.0",
-        "rxjs": "^6.4.0",
-        "winston": "^3.2.1"
+        "rxjs": "^6.4.0"
     },
     "devDependencies": {
         "@loopback/build": "^1.4.1",
