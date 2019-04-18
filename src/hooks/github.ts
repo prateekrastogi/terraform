@@ -9,12 +9,11 @@ export function register(): Observable<boolean> {
         concatMap(async browser => {
            const page = await browser.newPage()
            await page.goto(GITHUB_URL)
-           return from(await page.content())
-        }),
-        tap(val => console.log(val)),
-        concatMap(val => from([true])
+           console.log(await page.content())
+           
+           return true
+        })
         )
-    )
 
     return openWebPage
 }
