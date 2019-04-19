@@ -2,5 +2,9 @@
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     "auto-close-tag.enableAutoCloseSelfClosingTag": false,
     "auto-close-tag.enableAutoCloseTag": false,
-    "javascript.autoClosingTags": false
+    "javascript.autoClosingTags": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.tslint": true
+    },
 }
