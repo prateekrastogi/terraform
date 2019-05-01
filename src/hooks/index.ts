@@ -1,5 +1,5 @@
 import {Observable, from} from 'rxjs'
-import {register} from './github'
+import {register} from './twitter'
 
 export function initiate(): Observable<number> {
   register().subscribe()

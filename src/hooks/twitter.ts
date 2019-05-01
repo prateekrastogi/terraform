@@ -2,13 +2,13 @@ import * as puppeteer from 'puppeteer'
 import {Observable, from} from 'rxjs'
 import {concatMap, tap} from 'rxjs/operators'
 
-const GITHUB_URL = `https://github.com/`
+const TWITTER_URL = `https://twitter.com/`
 
 export function register(): Observable<boolean> {
   const openWebPage = from(puppeteer.launch()).pipe(
     concatMap(async browser => {
       const page = await browser.newPage()
-      await page.goto(GITHUB_URL)
+      await page.goto(TWITTER_URL)
       console.log(await page.content())
 
       return true
